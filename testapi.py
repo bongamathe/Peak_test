@@ -1,4 +1,5 @@
 import requests
+import yfinance
 
 url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=J40JYFDGGPQBLB3W'
 r = requests.get(url)
@@ -17,3 +18,9 @@ print(f"Date : {key_date}")
 print(data['Time Series (Daily)'][key_date])
 print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 print("Learning git")
+print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+
+aapl = yfinance.Ticker("AAPL")
+
+print(aapl.quarterly_balance_sheet)
+print(aapl.dividends)
